@@ -54,7 +54,7 @@
 // para[0].textContent = "This is Updated para 1"
 // para[1].style.color = "aqua"
 // para[1].innerHTML = "<div><strong>Hello</strong> World</div>"
-// console.log(para) 
+// console.log(para)
 
 
 // const button = document.querySelector("button")
@@ -87,6 +87,7 @@
 
 
 
+
 // const btn = document.querySelector("#btn")
 // btn.addEventListener("keydown", function(event){
 //     console.log(event.key)
@@ -101,10 +102,129 @@
 
 
 
-const handleSubmit = (event) => {
-    event.preventdefault()
-    console.log("Form Submitted")
-}
+// const handleSubmit = (event) => {
+//     event.preventdefault()
+//     console.log("Form Submitted")
+// }
 
-const form = document.querySelector("form")
-form.addEventListener("submit", handleSubmit)
+// const form = document.querySelector("form")
+// form.addEventListener("submit", handleSubmit)
+
+
+
+
+
+// const btn = document.querySelector("button")
+// const div = document.querySelector(".container")
+// const div2 = document.querySelector("outer")
+
+// btn .addEventListener("click", function (){console.log("button")}, true)
+
+
+
+
+// debugger
+// console.log(a)
+// // console.log(b)
+
+// var a = 78     // stored in global scope
+// let b = 45     // stored in script scope
+
+// console.log(a)
+// console.log(b)
+
+
+// function print(){
+//     let c = 45
+//     console.log(c)
+//     console.log("Inside fn")
+// }
+
+// print()
+
+
+// function first(){
+//     Second()
+// }
+
+// function Second(){
+//     third()
+// }
+
+// function third(){
+//     console.trace()
+// }
+// first()
+
+
+
+
+
+
+
+
+// console.log(a)
+// console.log(b)
+// console.log(c)
+
+// var a = 345
+// let b = 465
+
+
+
+// let total = 100
+// function calculator(){
+//     console.log(total)
+//     let total = 100
+// }
+// calculator() 
+
+
+
+
+// console.log("First step")                                 //Asynchronouus Code
+// setTimeout(() => {
+//     console.log("After 2 sec")
+// }, 2000);                                                 //2000 = 2 milliseconds
+// console.log("Second step")
+
+
+
+// setTimeout(() => {
+//     alert("ALERT! This is after 3 seconds")
+// }, 3*1000);   
+
+
+
+
+// const timerid = setInterval(() => {
+//         console.log("HELLO ! Students")                         // Repeats every 1 seconds      
+// }, 1000);
+
+// setTimeout(() => {
+//     clearInterval(timerid)                                 // Stops after 10 seconds
+// }, 10*1000);
+
+
+
+
+// let count = 1
+// const timer = setInterval(() => {
+//     console.log("Count : ", count)
+//     count += 1
+// }, 1000)
+
+// setTimeout(() => {
+//     clearInterval(timer)
+// }, 10*1000)                                                   
+
+
+
+
+
+// console.log("First step")                                 //Asynchronouus Code
+const timer = setTimeout(() => {
+    console.log("After 2 sec")
+}, 2000);
+clearTimeout(timer)                                                 //2000 = 2 milliseconds
+// console.log("Second step")
