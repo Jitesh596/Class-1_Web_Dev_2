@@ -253,23 +253,23 @@
 
 
 
-console.log("Starting Homework .......");
+// console.log("Starting Homework .......");
 
-setTimeout(() => {
-    console.log("Homework Done!");
-    console.log("Starting Dinner .......");
+// setTimeout(() => {
+//     console.log("Homework Done!");
+//     console.log("Starting Dinner .......");
 
-    setTimeout(() => {
-        console.log("Dinner Done!")
-        console.log("Getting ready to go out .......");
+//     setTimeout(() => {
+//         console.log("Dinner Done!")
+//         console.log("Getting ready to go out .......");
 
-        setTimeout(() => {
-            console.log("Going to playground !")
-    }, 1000);  //after dinner
+//         setTimeout(() => {
+//             console.log("Going to playground !")
+//     }, 1000);  //after dinner
 
-    }, 1500);  //dinner time
+//     }, 1500);  //dinner time
 
-}, 2000);  //homework time
+// }, 2000);  //homework time
 
 
 
