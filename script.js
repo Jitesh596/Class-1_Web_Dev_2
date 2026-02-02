@@ -222,9 +222,93 @@
 
 
 
-// console.log("First step")                                 //Asynchronouus Code
-const timer = setTimeout(() => {
-    console.log("After 2 sec")
-}, 2000);
-clearTimeout(timer)                                                 //2000 = 2 milliseconds
-// console.log("Second step")
+// // console.log("First step")                                 //Asynchronomus Code
+// const timer = setTimeout(() => {
+//     console.log("After 2 sec")
+// }, 2000);
+// clearTimeout(timer)                                          //2000 = 2 milliseconds
+// // console.log("Second step")
+
+
+
+
+// function print(){                                    //callback function
+//     console.log("Hello Students")
+// }
+
+// function greet(num){                                 //higher order function
+//     console.log("Welcome to the class")
+//     setTimeout(() => {
+//         console.log("Inside setTimeout")
+//         let firstname = "Jitesh"
+//         num(firstname)
+//     }, 2000);
+// }
+
+// greet(print)
+
+
+
+
+
+
+
+console.log("Starting Homework .......");
+
+setTimeout(() => {
+    console.log("Homework Done!");
+    console.log("Starting Dinner .......");
+
+    setTimeout(() => {
+        console.log("Dinner Done!")
+        console.log("Getting ready to go out .......");
+
+        setTimeout(() => {
+            console.log("Going to playground !")
+    }, 1000);  //after dinner
+
+    }, 1500);  //dinner time
+
+}, 2000);  //homework time
+
+
+
+
+
+
+
+function finishHomework(callback) {
+  console.log("Starting homework...");
+  setTimeout(() => {
+    console.log("Homework done!");
+    callback();
+  }, 2000);
+}
+
+function eatDinner(callback) {
+  console.log("Starting dinner...");
+  setTimeout(() => {
+    console.log("Dinner done!");
+    callback();
+  }, 1500);
+}
+
+function goToPlayground() {
+  console.log("Going to the playground!");
+}
+
+// Chained in steps, but cleaner
+finishHomework(() => {
+  eatDinner(() => {
+    goToPlayground();
+  });
+});
+
+
+
+
+
+
+
+
+
