@@ -1,9 +1,8 @@
-#btn{
-    background-color: red;
-    color: yellow;
-    width: 100px;
-    height: 50px;
-    border-radius: 25%;
+.btn{
+    background-color: darkblue;
+    color: white;
+    width: 90px;
+    height: 25px;
 }
 
 #button{
@@ -12,4 +11,17 @@
     width: 100px;
     height: 50px;
     border-radius: 25%;
+}
+
+
+
+
+.li{
+    background-color: lightgrey;
+    display: flex;
+    width: 200px;
+    margin-top: 5px;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 10px;
 }

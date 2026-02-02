@@ -277,38 +277,56 @@
 
 
 
-function finishHomework(callback) {
-  console.log("Starting homework...");
-  setTimeout(() => {
-    console.log("Homework done!");
-    callback();
-  }, 2000);
-}
+// function finishHomework(callback) {
+//   console.log("Starting homework...");
+//   setTimeout(() => {
+//     console.log("Homework done!");
+//     callback();
+//   }, 2000);
+// }
 
-function eatDinner(callback) {
-  console.log("Starting dinner...");
-  setTimeout(() => {
-    console.log("Dinner done!");
-    callback();
-  }, 1500);
-}
+// function eatDinner(callback) {
+//   console.log("Starting dinner...");
+//   setTimeout(() => {
+//     console.log("Dinner done!");
+//     callback();
+//   }, 1500);
+// }
 
-function goToPlayground() {
-  console.log("Going to the playground!");
-}
+// function goToPlayground() {
+//   console.log("Going to the playground!");
+// }
 
-// Chained in steps, but cleaner
-finishHomework(() => {
-  eatDinner(() => {
-    goToPlayground();
-  });
-});
-
-
+// // Chained in steps, but cleaner
+// finishHomework(() => {
+//   eatDinner(() => {
+//     goToPlayground();
+//   });
+// });
 
 
+const input = document.querySelector("#task")
+const btn = document.querySelector(".btn")
+const list = document.querySelector(".list")  
 
 
+addEventListener('click',(e) => {                                        // Add Event Listener to Button
+    e.preventDefault()
+    if(input.value === ""){                                            // Check if input is empty
+        alert("Please Enter a Task")
+        return
+    }
+    const li = document.createElement("li")                              // Create List Item
+    const deleteButton = document.createElement("button")                // Create Delete Button
+   
+    deleteButton.innerText = "Delete"                                    // Set Delete Button Text
+    li.innerText = input.value
 
+    li.appendChild(deleteButton)                                          // Append Delete Button to List Item
+    lists.appendChild(li)                                                 // Append List Item to List
 
-
+    deleteButton.addEventListener('click', () => {                        // Add Event Listener to Delete Button
+        list.removeChild(li)
+    })
+    input.value = ""           // Clear the input field after adding the task
+})
