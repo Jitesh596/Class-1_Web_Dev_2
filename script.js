@@ -305,28 +305,125 @@
 // });
 
 
-const input = document.querySelector("#task")
-const btn = document.querySelector(".btn")
-const list = document.querySelector(".list")  
+// const input = document.querySelector("#task")
+// const btn = document.querySelector(".btn")
+// const list = document.querySelector(".list")  
 
 
-addEventListener('click',(e) => {                                        // Add Event Listener to Button
-    e.preventDefault()
-    if(input.value === ""){                                            // Check if input is empty
-        alert("Please Enter a Task")
-        return
-    }
-    const li = document.createElement("li")                              // Create List Item
-    const deleteButton = document.createElement("button")                // Create Delete Button
+// addEventListener('click',(e) => {                                        // Add Event Listener to Button
+//     e.preventDefault()
+//     if(input.value === ""){                                            // Check if input is empty
+//         alert("Please Enter a Task")
+//         return
+//     }
+//     const li = document.createElement("li")                              // Create List Item
+//     const deleteButton = document.createElement("button")                // Create Delete Button
    
-    deleteButton.innerText = "Delete"                                    // Set Delete Button Text
-    li.innerText = input.value
+//     deleteButton.innerText = "Delete"                                    // Set Delete Button Text
+//     li.innerText = input.value
 
-    li.appendChild(deleteButton)                                          // Append Delete Button to List Item
-    lists.appendChild(li)                                                 // Append List Item to List
+//     li.appendChild(deleteButton)                                          // Append Delete Button to List Item
+//     lists.appendChild(li)                                                 // Append List Item to List
 
-    deleteButton.addEventListener('click', () => {                        // Add Event Listener to Delete Button
-        list.removeChild(li)
-    })
-    input.value = ""           // Clear the input field after adding the task
-})
+//     deleteButton.addEventListener('click', () => {                        // Add Event Listener to Delete Button
+//         list.removeChild(li)
+//     })
+//     input.value = ""           // Clear the input field after adding the task
+// })
+
+
+
+
+
+
+
+
+// const p = new Promise(function(resolve, reject){                        // Promise Constructor
+//     // resolve()
+//     // reject()                                                        // Promise States : Pending, Resolved, Rejected
+//     setTimeout(() => {                                                  
+//         let done = true;
+//         if (done){
+//             resolve({name:"Jitesh", age: 19})
+//         }else{
+//             reject("Network Issue")
+//         }
+//     }, 5000);
+// })
+// // console.log(p)
+
+// p.then((data) => {
+//     console.log("Resolved", data)
+// }).catch((err) => {
+//     console.log("Rejected", err)
+// }).finally(() => {
+//     console.log("Finally Block")
+// })
+
+
+
+
+// function dohomework() {
+//     const p = new Promise(function(resolve, reject) {
+//         setTimeout(() => {
+//             let done = true;
+
+//             if (done) {
+//                 console.log("Homework Is Done");
+//                 resolve("Homework Completed");
+//             } else {
+//                 reject("Homework Not Done");
+//             }
+//         }, 2000);
+//     });
+
+//     return p;
+// }
+
+
+// function eatDinner() {
+//     const p = new Promise(function(resolve, reject) {
+//         setTimeout(() => {
+//             let done = true;   
+//             if (done) {
+//                 console.log("Dinner Is Done");
+//                 resolve("Dinner Completed");
+//             } else {
+//                 reject("Dinner Not Done");
+//             }  
+//         }, 2000);
+//     });
+
+//     return p;
+// }
+
+
+// function playoutside() {
+//     const p = new Promise(function(resolve, reject) {
+//         setTimeout(() => {
+//             let done = true;   
+//             if (done) {
+//                 console.log("Playing Outside");
+//                 resolve("Playtime Completed");
+//             } else {
+//                 reject("Couldn't Play Outside");
+//             }  
+//         }, 2000);
+//     }); 
+//     return p;
+// }   
+
+
+// dohomework().then((data) => {
+//     console.log(data);
+//     return eatDinner();
+// }).then((data) => {
+//     console.log(data);
+//     return playoutside();
+// }).then((data) => {
+//     console.log(data);
+// }).catch((err) => {
+//     console.log(err);
+// }).finally(() => {
+//     console.log("Go To Sleep");
+// });
