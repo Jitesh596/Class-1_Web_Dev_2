@@ -427,3 +427,47 @@
 // }).finally(() => {
 //     console.log("Go To Sleep");
 // });
+
+
+
+
+
+
+console.log("First Line")
+setTimeout(() => {
+    console.log("Inside Timeout")
+}, 0);
+const p = new Promise((resolve, reject) => {
+    resolve()
+})
+p.then(() => {
+    console.log("Inside Promise")
+}).catch(() => {
+    console.log("Inside catch")
+})
+console.log("Last Line")
+
+
+const p2 = new Promise((resolve, reject) => {
+    resolve()
+})
+p2.then(() => {
+    console.log("Inside Promise")
+}).catch(() => {
+    console.log("Inside catch")
+})
+console.log("Last Line")
+
+
+
+
+const p3 = new Promise((resolve, reject) => {
+    resolve()
+})
+p3.then(() => {
+    console.log("Inside Promise")
+}).catch(() => {
+    console.log("Inside catch")
+})
+console.log("Last Line")
+
