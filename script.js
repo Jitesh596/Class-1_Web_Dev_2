@@ -363,7 +363,7 @@
 
 
 
-// function dohomework() {
+// function dohomework() {                                                         // Promise Chaining
 //     const p = new Promise(function(resolve, reject) {
 //         setTimeout(() => {
 //             let done = true;
@@ -433,7 +433,7 @@
 
 
 
-// console.log("First Line")
+// console.log("First Line")                                            // Synchronous Code (Event Loop and Microtask Queue)
 // setTimeout(() => {
 //     console.log("Inside Timeout")
 // }, 0);
@@ -459,7 +459,6 @@
 // console.log("Last Line")
 
 
-
 // const p3 = new Promise((resolve, reject) => {
 //     resolve()
 // })
@@ -475,6 +474,70 @@
 
 
 
+// function orderFood() {                                                       // Promise Chaining
+//     return new Promise(function(resolve, reject) {
+//         setTimeout(() => {
+//             console.log("Food ordered");
+//             resolve("Food ordered");
+//         }, 2000);
+//     });
+// }
+
+// function prepareFood() {
+//     return new Promise(function(resolve, reject) {
+//         setTimeout(() => {
+//             console.log("Food prepared");
+//             resolve("Food prepared");
+//         }, 1000);
+//     });
+// }
+
+// function deliverFood() {
+//     return new Promise(function(resolve, reject) {
+//         setTimeout(() => {
+//             console.log("Food Delivered");
+//             resolve("Food Delivered");
+//         }, 1000);
+//     });
+// }
+
+// async function order(){
+//     const data = await orderFood()
+//     console.log(data)
+//     await prepareFood()
+//     await deliverFood() 
+// }
+
+// order()
+
+// // orderFood().then((data) => {                                   //use await and async instead of then and catch for better readability
+// //     console.log(data);
+// //     return prepareFood();
+// // }).then((data) => {
+// //     console.log(data);
+// //     return deliverFood();
+// // }).then((data) => {
+// //     console.log(data);
+// // }).catch((err) => {
+// //     console.log(err);
+// // });
 
 
 
+
+
+
+console.log("First Line")  
+try{
+    // //let sample = 45
+    // console.log(sample)   
+    let age = 19
+    if(age < 18){
+        throw new Error("You are not eligible to vote")
+    }
+} catch(error){
+    console.log(error)
+} finally {
+    console.log("Finally block executed");
+}
+console.log("Last Line")
