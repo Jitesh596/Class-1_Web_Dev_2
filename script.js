@@ -527,17 +527,32 @@
 
 
 
-console.log("First Line")  
-try{
-    // //let sample = 45
-    // console.log(sample)   
-    let age = 19
-    if(age < 18){
-        throw new Error("You are not eligible to vote")
+// console.log("First Line")  
+// try{
+//     // //let sample = 45
+//     // console.log(sample)   
+//     let age = 19
+//     if(age < 18){
+//         throw new Error("You are not eligible to vote")
+//     }
+// } catch(error){
+//     console.log(error)
+// } finally {
+//     console.log("Finally block executed");
+// }
+// console.log("Last Line")
+
+
+
+async function getData() {
+    try{
+        const reponse = await fetch("https://dummyjson.com/products")
+        if (reponse.ok == false) throw new Error("Data Not Found")
+        
+            const data = await reponse.json()
+            console.log(data)
+        } catch(error) {
+            console.log("Data Not Found")
+        }
     }
-} catch(error){
-    console.log(error)
-} finally {
-    console.log("Finally block executed");
-}
-console.log("Last Line")
+    getData()
