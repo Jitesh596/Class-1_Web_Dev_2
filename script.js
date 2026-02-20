@@ -510,7 +510,7 @@
 
 // order()
 
-// // orderFood().then((data) => {                                   //use await and async instead of then and catch for better readability
+// // orderFood().then((data) => {                              //use await and async instead of then and catch for better readability
 // //     console.log(data);
 // //     return prepareFood();
 // // }).then((data) => {
@@ -544,15 +544,108 @@
 
 
 
-async function getData() {
-    try{
-        const reponse = await fetch("https://dummyjson.com/products")
-        if (reponse.ok == false) throw new Error("Data Not Found")
+
+
+
+
+// async function getData() {
+//     try{
+//         const reponse = await fetch("https://dummyjson.com/products")
+//         if (reponse.ok == false) throw new Error("Data Not Found")
         
-            const data = await reponse.json()
-            console.log(data)
-        } catch(error) {
-            console.log("Data Not Found")
-        }
-    }
-    getData()
+//             const data = await reponse.json()
+//             console.log(data)
+//         } catch(error) {
+//             console.log("Data Not Found")
+//         }
+//     }
+//     getData()
+
+
+
+
+
+
+// async function sendData() {                           //to send data to the server we use POST method and to get data we use GET method
+//     try{
+//         const response = await fetch("https://dummyjson.com/products/add", {         
+//             method: "POST",
+//             headers: {
+//                 "Content-Type": "application/json"
+//             },
+//             body: JSON.stringify({
+//                 title: "Macbook",
+//                 description: "Macbook Pro",
+//                 price: 100000,
+//                 rating: 4.5,
+//                 discountPercentage: 5,
+//                 stock: 5,
+//                 brand: "Apple",
+//             })
+//         })
+
+//         const data = await response.json()
+//         console.log(data)
+//     } catch(error) {
+//         console.log("Data Not Found")
+//     }   
+// }
+
+// sendData()
+
+
+
+
+
+
+
+// let obj = {
+//     title: "Macbook",
+//     description: "Macbook Pro",
+//     price: 100000,
+//     rating: 4.5,
+//     discountPercentage: 5,
+//     stock: 5,
+//     brand: "Apple",
+// }
+
+// localStorage.setItem("obj", JSON.stringify(obj))                     // Store Object in Local Storage
+// localStorage.setItem("name", "Jitesh Kumar")                         // Local Storage
+// localStorage.setItem("age", "19")
+// localStorage.setItem("city", "Nuh")
+
+// console.log(localStorage.getItem("name"))   
+// console.log(localStorage.getItem("age"))
+// console.log(localStorage.getItem("city"))
+
+// console.log(JSON.parse(localStorage.getItem("obj")))                 // Get Object from Local Storage and Parse it to Object
+
+// localStorage.removeItem("age")                                       // Remove Item from Local Storage
+// // localStorage.clear()                                              // Clear Local Storage
+
+
+
+// sessionStorage.setItem("obj", JSON.stringify(obj))                     // Store Object in Local Storage
+// sessionStorage.setItem("name", "Jitesh Kumar")                         // Session Storage
+// sessionStorage.setItem("city", "Nuh")
+
+// console.log(sessionStorage.getItem("name"))   
+// console.log(sessionStorage.getItem("age"))
+// console.log(sessionStorage.getItem("city"))
+
+// console.log(JSON.parse(sessionStorage.getItem("obj")))                 // Get Object from Local Storage and Parse it to Object
+
+// sessionStorage.removeItem("age") 
+
+
+
+document.cookie = "name=Jitesh Kumar; expires=sat, 31 Dec 2024 23:59:59 UTC;"
+document.cookie = "age=19; expires=sat, 31 Dec 2024 23:59:59 UTC;"
+
+console.log(document.cookie)                                                   // Cookies
+
+async function sample() {
+    await fetch("http://127.0.0.1:5500/index.html")
+}
+
+sample()
