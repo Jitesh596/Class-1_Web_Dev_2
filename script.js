@@ -635,17 +635,64 @@
 
 // console.log(JSON.parse(sessionStorage.getItem("obj")))                 // Get Object from Local Storage and Parse it to Object
 
-// sessionStorage.removeItem("age") 
+// // sessionStorage.removeItem("age") 
 
 
 
-document.cookie = "name=Jitesh Kumar; expires=sat, 31 Dec 2024 23:59:59 UTC;"
-document.cookie = "age=19; expires=sat, 31 Dec 2024 23:59:59 UTC;"
+// document.cookie = "name=Jitesh Kumar; expires=sat, 31 Dec 2024 23:59:59 UTC;"
+// document.cookie = "age=19; expires=sat, 31 Dec 2024 23:59:59 UTC;"
 
-console.log(document.cookie)                                                   // Cookies
+// console.log(document.cookie)                                                   // Cookies
 
-async function sample() {
-    await fetch("http://127.0.0.1:5500/index.html")
+// async function sample() {
+//     await fetch("http://127.0.0.1:5500/index.html")
+// }
+
+// sample()
+
+
+
+
+
+// function* generate (){                          
+//     // yield 1
+//     // yield 2
+//     // yield 3
+
+//     for (let index = 1; index < 4; index ++){
+//         yield index
+//     }
+
+//     let i = 1;
+//     while (true) {
+//         yield 1
+//         i ++
+//     }
+// }
+
+// const gen = generate()
+
+// console.log(gen)
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+
+
+
+
+
+function add (a){                                          //currying
+    return function (b){
+        return function (c){
+            return a + b + c
+        }
+    }
 }
 
-sample()
+// console.log(add(1)(2)(3))                 //first way
+
+const first = add (1)
+const second = first (2)
+const third = second (3)
+console.log (third)
