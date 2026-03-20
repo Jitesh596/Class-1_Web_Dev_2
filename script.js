@@ -682,17 +682,26 @@
 
 
 
-function add (a){                                          //currying
-    return function (b){
-        return function (c){
-            return a + b + c
-        }
-    }
-}
+// function add (a){                                          //currying
+//     return function (b){
+//         return function (c){
+//             return a + b + c
+//         }
+//     }
+// }
 
 // console.log(add(1)(2)(3))                 //first way
 
-const first = add (1)
-const second = first (2)
-const third = second (3)
-console.log (third)
+// const first = add (1)
+// const second = first (2)
+// const third = second (3)
+// console.log (third)
+
+
+
+
+
+
+
+
+// 20-03-2026 (PM)
