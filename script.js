@@ -705,3 +705,4 @@
 
 
 // 20-03-2026 (PM)
+console.log(document)
