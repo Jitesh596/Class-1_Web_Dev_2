@@ -17,27 +17,54 @@
 // }
 
 
-import React, {Component, useState} from "react";
+import React, { useState } from "react";
 
-function Sample(probs) {
+function Sample(props) {
 
-    const [name, setname] = useState("Jitesh");
-    const [age, setCount] = useState(20);
+  const [name, setName] = useState("Jitesh");
+  const [age, setAge] = useState(20);
 
-    return (
-        <div>   
-            <h2>Trending Topics</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            <h3>{name}</h3>
-            <button onClick={() => {
-                setname("Vishnu");
+  return (
+    <div>
+      <h2>Trending Topics</h2>
 
-            }}> Name Change </button>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quisquam, voluptatum.
+      </p>
 
-            </button>
-        </div>
-    )
+      <h3>{name}</h3>
+      <h4>Age: {age}</h4>
+
+      <button
+        onClick={() => {
+          setName("Vishnu");
+        }}
+      >
+        Name Change
+      </button>
+
+      <button
+        onClick={() => {
+          setAge(age + 1);
+        }}
+      >
+        Increase Age
+      </button>
+
+      <button
+        className="counter"
+        onClick={() => props.setCount((count) => count + 1)}
+      >
+        Count is {props.count}
+      </button>
+
+    </div>
+  );
 }
+
+export default Sample;
+           
 
 
 
