@@ -49,6 +49,7 @@
 
 
 import React,{Component, useState} from 'react'
+import "../css/sample.css"
 
 // function Sample(props) {
 //     const [name,setName]=useState("Devendra")
@@ -103,7 +104,7 @@ class Sample extends Component {
         console.log("Component Will Unmount")
     }
 
-    
+
 
     render(){
         return (
