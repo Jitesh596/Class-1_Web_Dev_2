@@ -165,3 +165,15 @@ export default Sample
 //     }
 
 // }
+
+
+
+
+const Button = StylePropertyMapReadOnly.button`
+    background-color: indigo;
+    color: white;
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+`
