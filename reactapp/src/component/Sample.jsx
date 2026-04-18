@@ -6,7 +6,7 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
 function Sample(props) {
-    const [name,setName]=useState("Jitesh Kumae")
+    const [name,setName]=useState("Jitesh Kumar")
     const [age,setAge]=useState(20)
 
     
