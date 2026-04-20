@@ -6,6 +6,7 @@ import './App.css'
 import {add,subtract} from './utility'
 import Sample from './component/Sample'
 import HomePage from './component/HomePage'
+import Contact from './component/Contact'
 
 
 function App() {
@@ -16,12 +17,12 @@ function App() {
     <>
       <Sample count={count} setCount={setCount}/>
       <HomePage/>
+      <Contact/>
     </>
   )
 }
 
 export default App
-
 
 
 
