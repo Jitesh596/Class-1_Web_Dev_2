@@ -1,4 +1,3 @@
-
 import React,{Component, useState, useEffect, useRef} from 'react'
 import style from '../css/Sample.module.css'
 import style1 from '../css/HomePage.module.css'
@@ -8,7 +7,7 @@ import { css } from '@emotion/react'
 import axios from 'axios'
 
 function Sample(props) {
-    const [name,setName]=useState("Devendra")
+    const [name,setName]=useState("Jitesh Kumar")
     const [age,setAge]=useState(20)
     const [loading, setLoading] = useState(false)
     const inputRef=useRef(null)
@@ -42,11 +41,10 @@ function Sample(props) {
             }
         
         fetchingData()
-        inputRef.current.value = "Hello World"
+
+        inputRef.current.value="Hello World"
         inputRef.current.focus()
         },[])
-
-       
     
 
   return (
@@ -60,8 +58,7 @@ function Sample(props) {
             
         }}>Name Change</button>
 
-        <input type="text" ref={inputRef}>inputRef</input>
-
+        <input type='text' placeholder='"Enter the text' ref={inputRef}></input>
     <button
         className="counter"
         onClick={() => props.setCount((count) => count + 1)}
@@ -97,10 +94,6 @@ const Button=styled.button`
     border-radius: 10px;
     border:none
 `
-
-
-
-
 
 
 
