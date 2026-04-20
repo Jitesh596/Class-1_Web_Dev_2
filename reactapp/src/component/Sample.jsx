@@ -11,7 +11,7 @@ function Sample(props) {
 
     useEffect(()=>{
         console.log("Component Did Mount")
-    }, [])
+    }, []);
 
   return (
     <div>
