@@ -10,7 +10,10 @@ function Sample(props) {
     const [age,setAge]=useState(20)
 
     useEffect(()=>{
-        console.log("Component Did Mount")
+        console.log("Component Mounted")
+        return()=>{
+            console.log("Component Unmounted")
+        }
     }, []);
 
   return (
