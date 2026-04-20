@@ -42,7 +42,7 @@ function Sample(props) {
         
         fetchingData()
 
-        inputRef.current.value="Hello World"
+        inputRef.current.value="Hello"
         inputRef.current.focus()
         },[])
     
@@ -94,7 +94,6 @@ const Button=styled.button`
     border-radius: 10px;
     border:none
 `
-
 
 
 
