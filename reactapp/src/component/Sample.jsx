@@ -14,7 +14,7 @@ function Sample(props) {
         return()=>{
             console.log("Component Unmounted")
         }
-    }, []);
+    }, [name]);
 
   return (
     <div>
