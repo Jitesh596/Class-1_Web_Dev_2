@@ -43,7 +43,7 @@ function Sample(props) {
         
         fetchingData()
         inputRef.current.value = "Hello World"
-        inputRef.current.focus
+        inputRef.current.focus()
         },[])
 
        
