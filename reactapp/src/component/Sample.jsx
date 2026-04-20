@@ -9,12 +9,26 @@ function Sample(props) {
     const [name,setName]=useState("Jitesh Kumar")
     const [age,setAge]=useState(20)
 
+
     useEffect(()=>{
-        console.log("Component Mounted")
+    function fetchingData(){
+        async function fetchData() {
+            const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+            const data = await response.json();
+            console.log(data);
+        }
+        fetchData();
+    }
+    fetchingData()
+    console.log("Component Mounted")
         return()=>{
             console.log("Component Unmounted")
         }
     }, [name]);
+
+
+
+
 
   return (
     <div>
