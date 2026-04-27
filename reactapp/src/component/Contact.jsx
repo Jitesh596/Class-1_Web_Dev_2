@@ -5,6 +5,7 @@ function Contact() {
   const [name,setName]=useState("")
   const [email,setEmail]=useState("")
   const [message,setMessage]=useState("")
+
   const navigate = useNavigate()
   
   const handleSubmit = (data) => {
@@ -14,18 +15,14 @@ function Contact() {
     console.log("Name:", name)
     console.log("Email", email)
     console.log("Message", message)
-
     console.log(data)
-
-
-
+    navigate("/")
 
     }else{
       alert("Please enter a valid email address")
       return;
-    } 
-        
     }
+  }
   
     return (
     <div>
