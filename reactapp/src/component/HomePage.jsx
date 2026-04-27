@@ -14,18 +14,19 @@ function HomePage() {
 
     return (
         <>
-            {login ? (
-                <button onClick={() => setLogin(false)}>Logout</button>
-            ) : (
-                <button onClick={() => setLogin(true)}>Login</button>
-            )}
+        {login ? (
+            <button onClick={() => setLogin(false)}>Logout</button>
+        ) : (
+            <button onClick={() => setLogin(true)}>Login</button>
+        )}
 
-            <ul>
-                <li><Link to="/">HomePage</Link></li>
-                <li><NavLink to="/" style={({isActive}) => ({color:isActive? "red": "blue"})}>HomePage</NavLink></li>
-                <li><Link to="/contact">Contact</Link></li>
-                <li><NavLink to="/contact" style={({isActive}) => ({color:isActive? "red": "blue"})}>Contact</NavLink></li>
-            </ul>
+        <ul>
+            <li><Link to="/homepage">HomePage</Link></li>
+            <li><NavLink to="/homepage" style={({isActive})=>({color:isActive?"red":"blue"})}>HomePage</NavLink></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><NavLink to="/contact" style={({isActive})=>({color:isActive?"red":"blue"})}>Contact</NavLink></li>
+        </ul>
+         <Profile name={name} />
         </>
     );
 }
