@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+
 
 function HomePage() {
     const [login, setLogin] = useState(false);
@@ -21,7 +22,9 @@ function HomePage() {
 
             <ul>
                 <li><Link to="/">HomePage</Link></li>
+                <li><NavLink to="/" style={({isActive}) => ({color:isActive? "red": "blue"})}>HomePage</NavLink></li>
                 <li><Link to="/contact">Contact</Link></li>
+                <li><NavLink to="/contact" style={({isActive}) => ({color:isActive? "red": "blue"})}>Contact</NavLink></li>
             </ul>
         </>
     );
