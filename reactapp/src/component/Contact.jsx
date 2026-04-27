@@ -1,26 +1,31 @@
 import React, {useState} from 'react'
 
 function Contact() {
-    const [name,setName]=useState("")
-    const [email,setEmail]=useState("")
-    const [message,setMessage]=useState("")
+  const [name,setName]=useState("")
+  const [email,setEmail]=useState("")
+  const [message,setMessage]=useState("")
 
-    const handleSubmit = (data) => {
-        event.preventDefault();
-        if (email.endsWith("@krmu.edu.in")) {
+  const handleSubmit = (data) => {
+    event.preventDefault();
+    if (email.endsWith("@krmu.edu.in")) {
 
-        console.log("Name:", name)
-        console.log("Email", email)
-        console.log("Message", message)
+    console.log("Name:", name)
+    console.log("Email", email)
+    console.log("Message", message)
 
-        console.log(data)
-        }else{
-        alert("Please enter a valid email address")
-        return;
-        } 
+    console.log(data)
+
+
+
+
+    }else{
+      alert("Please enter a valid email address")
+      return;
+    } 
         
     }
-  return (
+  
+    return (
     <div>
         <h1>Contact us</h1>
         <form onSubmit={()=>handleSubmit ("Sample message")}>
