@@ -20,8 +20,6 @@ function HomePage() {
             )}
 
             <ul>
-      
-      
                 <li><Link to="/">HomePage</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
             </ul>
