@@ -7,7 +7,7 @@ import { css } from '@emotion/react'
 import axios from 'axios'
 
 function Sample(props) {
-    const [name,setName]=useState("Jitesh Kumar ")
+    const [name,setName]=useState("Devendra")
     const [age,setAge]=useState(20)
     const [loading, setLoading] = useState(false)
     const inputRef=useRef(null)
@@ -97,7 +97,6 @@ const Button=styled.button`
     border-radius: 10px;
     border:none
 `
-
 
 
 
