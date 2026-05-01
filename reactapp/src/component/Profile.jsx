@@ -2,7 +2,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 function Profile({name}) {
-    const {username}=useParams()
+
+  const {username}=useParams()
   return (
     <div>
       <h2>Profile</h2>
