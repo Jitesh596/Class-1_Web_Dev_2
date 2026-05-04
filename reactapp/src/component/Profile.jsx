@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
+import { UserContext } from '../UserContext'
 
-function Profile({name}) {
-
-  const {username}=useParams()
+function Profile() {
+    const name=useContext(UserContext)
+    const {username}=useParams()
   return (
     <div>
       <h2>Profile</h2>
